@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survei Kemenag Muaro Jambi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            height: 100vh;
+            background: url('background.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            top: 0;
+            left: 0;
+        }
+        
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            z-index: 2;
+            width: 90%;
+            max-width: 700px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: #ccc;
+            /* placeholder logo */
+            margin: 0 auto 20px;
+            border-radius: 10px;
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: #eaeaea;
+            border-radius: 20px;
+            padding: 30px 20px;
+        }
+        
+        .btn {
+            display: block;
+            background: #0f8fa1;
+            color: black;
+            text-decoration: none;
+            padding: 15px;
+            margin: 15px auto;
+            border-radius: 30px;
+            width: 80%;
+            max-width: 500px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        
+        .btn:hover {
+            background: #0c7483;
+            color: white;
+        }
+        
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .footer-box {
+            background: #0f8fa1;
+            padding: 10px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="logo">
+            <!-- LOGO TARUH DI SINI -->
+        </div>
+
+        <div class="subtitle">
+            SURVEI KEPUASAN MASYARAKAT (SKM), <br> SURVEI PERSEPSI KUALITAS PELAYANAN (SPKP), <br> SURVEI PERSEPSI ANTI KORUPSI (SPAK)
+        </div>
+
+        <div class="title">
+            Kantor Kementerian Agama <br> Kabupaten Muaro Jambi
+        </div>
+
+        <div class="card">
+            <a href="#" class="btn">SURVEI KEPUASAN MASYARAKAT (SKM)</a>
+            <a href="#" class="btn">SURVEI PERSEPSI KUALITAS PELAYANAN (SPKP)</a>
+            <a href="#" class="btn">SURVEI PERSEPSI ANTI KORUPSI (SPAK)</a>
+        </div>
+
+        <div class="footer">
+            <div class="footer-box">
+                <!-- ICON SOSIAL MEDIA -->
+                <div>📘 📸 🎵 @kemenagmuarojambi</div>
+                <div>🌐 jambi.kemenag.go.id/daerah/muarojambi/</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
