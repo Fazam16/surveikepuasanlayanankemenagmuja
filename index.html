@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survei Kemenag Muaro Jambi</title>
+
     <style>
         * {
             margin: 0;
@@ -13,13 +15,13 @@
         }
         
         body {
-            height: 100vh;
-            background: url('img/background.jpeg') no-repeat center center;
-            background-size: cover;
+            min-height: 100vh;
+            background: url('img/background.jpeg') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
+            padding: 20px 10px;
         }
         
         .overlay {
@@ -27,9 +29,11 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px);
             top: 0;
             left: 0;
         }
+        /* CONTAINER RESPONSIVE */
         
         .container {
             position: relative;
@@ -37,47 +41,51 @@
             color: white;
             z-index: 2;
             width: 90%;
-            max-width: 700px;
+            max-width: clamp(500px, 70vw, 800px);
         }
+        /* LOGO */
         
         .logo {
-            width: 80px;
-            height: 80px;
-            /* placeholder logo */
-            margin: 0 auto 20px;
-            border-radius: 10px;
+            width: clamp(60px, 10vw, 90px);
+            margin: 0 auto 15px;
+            display: block;
         }
+        /* TEXT */
         
         .subtitle {
-            font-size: 14px;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
+            font-size: 11px;
+            line-height: 1.4;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
         }
         
         .title {
-            font-size: 28px;
+            font-size: 18px;
             font-weight: bold;
-            margin-bottom: 30px;
+            line-height: 1.3;
+            margin-bottom: 20px;
         }
+        /* CARD */
         
         .card {
-            background: #ffffff8f;
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
-            padding: 30px 20px;
+            padding: 20px 15px;
         }
+        /* BUTTON */
         
         .btn {
             display: block;
             background: #0f8fa1;
             color: black;
             text-decoration: none;
-            padding: 15px;
-            margin: 15px auto;
-            border-radius: 30px;
-            width: 80%;
-            max-width: 500px;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 25px;
+            width: 100%;
+            font-size: 13px;
             font-weight: bold;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             transition: 0.3s;
         }
         
@@ -85,41 +93,68 @@
             background: #0c7483;
             color: white;
         }
+        /* FOOTER */
         
         .footer {
-            margin-top: 20px;
-            font-size: 14px;
+            margin-top: 15px;
         }
         
         .footer-box {
             background: #0f8fa1;
-            padding: 10px;
-            border-radius: 15px;
+            padding: 8px 12px;
+            border-radius: 12px;
             display: inline-block;
-            margin-top: 10px;
         }
         
         .social {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 2px;
-            margin-bottom: 5px;
+            gap: 3px;
+            margin-bottom: 2px;
         }
         
         .social img {
-            width: 30px;
-            height: 30px;
-            object-fit: contain;
+            width: 16px;
+            height: 25px;
         }
         
         .social span {
-            margin-left: 0px;
+            font-size: 12px;
         }
         
         .website {
-            text-align: center;
-            font-size: 14px;
+            font-size: 11px;
+        }
+        /* TABLET */
+        
+        @media (min-width: 768px) {
+            .subtitle {
+                font-size: 14px;
+            }
+            .title {
+                font-size: 26px;
+            }
+            .btn {
+                font-size: 15px;
+                padding: 14px;
+            }
+            .card {
+                padding: 30px 25px;
+            }
+            .social img {
+                width: 20px;
+            }
+            .website {
+                font-size: 13px;
+            }
+        }
+        /* DESKTOP BESAR */
+        
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 800px;
+            }
         }
     </style>
 </head>
@@ -141,13 +176,20 @@
         </div>
 
         <div class="card">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEl27rhAuBdWvbHah93CHIjGt9MgNzYCk8PSdRW_1BBwTUCQ/viewform" class="btn">SURVEI KEPUASAN MASYARAKAT (SKM)</a>
-            <a href="https://pmpzi.kemenag.go.id/survei/instrumen.php?id=3455" class="btn">SURVEI PERSEPSI KUALITAS PELAYANAN (SPKP)</a>
-            <a href="https://pmpzi.kemenag.go.id/survei/instrumen.php?id=3453" class="btn">SURVEI PERSEPSI ANTI KORUPSI (SPAK)</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEl27rhAuBdWvbHah93CHIjGt9MgNzYCk8PSdRW_1BBwTUCQ/viewform" class="btn">
+                SURVEI KEPUASAN MASYARAKAT (SKM)
+            </a>
+
+            <a href="https://pmpzi.kemenag.go.id/survei/instrumen.php?id=3455" class="btn">
+                SURVEI PERSEPSI KUALITAS PELAYANAN (SPKP)
+            </a>
+
+            <a href="https://pmpzi.kemenag.go.id/survei/instrumen.php?id=3453" class="btn">
+                SURVEI PERSEPSI ANTI KORUPSI (SPAK)
+            </a>
         </div>
 
         <div class="footer">
-
             <div class="footer-box">
                 <div class="social">
                     <img src="img/facebook.png" alt="Facebook">
@@ -155,12 +197,14 @@
                     <img src="img/instagram.png" alt="Instagram">
                     <span>@kemenagmuarojambi</span>
                 </div>
-                <div class="website">
-                    <span>🌐 jambi.kemenag.go.id/daerah/muarojambi/</span>
-                </div>
-            </div>
 
+                <div class="website">
+                    🌐 jambi.kemenag.go.id/daerah/muarojambi/
+                </div>
+
+            </div>
         </div>
+
     </div>
 
 </body>
